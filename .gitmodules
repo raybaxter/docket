@@ -1,0 +1,3 @@
+[submodule "vendor/plugins/activescaffold"]
+	path = vendor/plugins/activescaffold
+	url = git://github.com/activescaffold/active_scaffold.git

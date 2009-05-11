@@ -1,0 +1,302 @@
+<!--  Define application parameters for JCC Forecourt/Fullcourt Web application -->
+<!-- if url.dist number provided is invalid, kick them out =-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <!-- BEGIN DOCUMENT HEADER -->
+  <head>
+    <title>
+      California Courts - Appellate Court Case Information
+    </title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Thu, 1 Jan 1970 01:00:00 GMT">
+    <script language="JavaScript" type="text/javascript">
+<!--
+    var images_loaded = "no";
+
+    if (document.images) {
+    load_images();  }
+      
+    function load_images() {
+    home1 = new Image();
+    home1.src = "/images/cchome.gif";
+    home2 = new Image();
+    home2.src = "/images/cchomeon.gif";
+    images_loaded = "yes";
+        }
+
+    function image(name, num)  {  
+        if (images_loaded == "yes") {
+        path = eval(name + num + ".src");
+        document[name].src = path;
+            }
+      }
+
+
+    function redirect(dist, page) {
+    var x = dist;
+    var y = page;
+    if (y == 3) {
+    if ((x == 0) || (x == 42)) {
+      checkCalendar(x);
+    } else {
+      location.href="/calendar.cfm?dist=" + x;
+    }
+    } else if (y == 2) {
+    location.href="/email.cfm?dist=" + x;
+    } else {
+    location.href="/search.cfm?dist=" + x;
+    }
+    }
+
+
+    function checkCalendar(dist) {
+    var x = dist;
+    if (x > 0 ) { 
+    var msg = "Calendar search is not available for the" +
+    "\nFourth Appellate District Division 2."
+    alert(msg);
+    } else {
+    var msg = "Supreme Court calendar information is available on the main California Courts " +
+    "\nwebsite at http://www.courtinfo.ca.gov/cgi-bin/calendars.cgi?Courts=S. " +
+     "\n\nTo leave the Appellate Courts Case Information website and be redirected to" +
+     "\nthe Supreme Court Calendars, click OK. " +
+     "\n\nOtherwise, click CANCEL. "
+    if (confirm(msg)) {
+      location.href="http://www.courtinfo.ca.gov/cgi-bin/calendars.cgi?Courts=S";
+    }
+    }
+    }
+    //-->     
+    </script>
+  </head><!-- END DOCUMENT HEADER -->
+  <!-- BEGIN DOCUMENT BODY -->
+  <body text="#000000" bgcolor="#FFF0C0" link="#9C2814" vlink="#430000" alink="#9C2814">
+    <!-- table for top banner -->
+    <table border="0" cellspacing="0" cellpadding="0" width="585">
+      <tr>
+        <td>
+          <center>
+            <img src="/images/homemast.gif" height="63" width="585">
+          </center>
+        </td>
+      </tr>
+    </table><!-- end table for top banner -->
+    <!-- BEGIN MAIN TABLE -->
+    <table border="0" cellspacing="0" cellpadding="0" width="585">
+      <tr>
+        <!-- left hand side navigation buttons -->
+        <td valign="top" width="85">
+          <a href="/index.html"><img src="/images/side_welcome.gif" border="0" width="85" height="31" alt="Welcome"></a><br>
+          <a href="/search.cfm?dist=3"><img src="/images/side_search.gif" border="0" width="85" height="31" alt="Search"></a><br>
+          <a href="/email.cfm?dist=3&amp;doc_no=C058849"><img src="/images/side_email.gif" border="0" width="85" height="31" alt="E-mail"></a><br>
+          <a href="/calendar.cfm?dist=3"><img src="/images/side_calendar.gif" border="0" width="85" height="31" alt="Calendar"></a><br>
+          <a href="/help.cfm?dist=3"><img src="/images/side_help.gif" border="0" width="85" height="31" alt="Help"></a><br>
+          <a href="http://www.courtinfo.ca.gov/opinions/"><img src="/images/side_opinions.gif" border="0" width="85" height="31" alt="Opinions"></a><br>
+          <a href="http://www.courtinfo.ca.gov/" onmouseover="image('home',2)" onmouseout="image('home',1)"><img name="home" src="/images/cchome.gif" border="0" alt="California Courts home page" id="home"></a>
+        </td><!-- divider between buttons and content area -->
+        <td align="left" valign="top" bgcolor="#9C2814" width="1">
+          <img src="/images/1pixel.gif" alt="blank 1x1 pixel transparent gif" border="0" height="1" width="1">
+        </td><!-- main content area -->
+        <td align="left" valign="top">
+          <!-- begin main content table -->
+          <table border="0" cellspacing="0" cellpadding="7" cols="1" width="100%">
+            <tr>
+              <td valign="top">
+                <font face="Arial,Helvetica" color="#990000" size="4"><b>3rd Appellate District</b></font><br>
+              </td>
+              <td valign="top" align="right">
+                <form name="redirectform" id="redirectform">
+                  <select name="district" size="1" onchange="redirect(this.form.district.options[this.form.district.selectedIndex].value, 0)">
+                    <option selected>
+                      Change court
+                    </option>
+                    <option value="0">
+                      Supreme
+                    </option>
+                    <option value="1">
+                      District 1
+                    </option>
+                    <option value="2">
+                      District 2
+                    </option>
+                    <option value="3">
+                      District 3
+                    </option>
+                    <option value="41">
+                      District 4 Div 1
+                    </option>
+                    <option value="42">
+                      District 4 Div 2
+                    </option>
+                    <option value="43">
+                      District 4 Div 3
+                    </option>
+                    <option value="5">
+                      District 5
+                    </option>
+                    <option value="6">
+                      District 6
+                    </option>
+                  </select>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" valign="top"></td>
+            </tr>
+            <tr>
+              <td colspan="2" valign="top">
+                <p>
+                  <font face="Arial,Helvetica" size="1">Court data last updated: 05/10/2009 11:05 PM</font>
+                </p>
+                <div align="center">
+                  <font face="Arial,Helvetica" size="2"><b><a href="mainCaseScreen.cfm?dist=3&amp;doc_id=1368146&amp;doc_no=C058849">Case Summary</a> &nbsp;&nbsp; <a href="dockets.cfm?dist=3&amp;doc_id=1368146&amp;doc_no=C058849">Docket</a> &nbsp;&nbsp; <a href="briefing.cfm?dist=3&amp;doc_id=1368146&amp;doc_no=C058849">Briefs</a><br>
+                  <a href="disposition.cfm?dist=3&amp;doc_id=1368146&amp;doc_no=C058849">Disposition</a> &nbsp;&nbsp; <a href="partiesAndAttorneys.cfm?dist=3&amp;doc_id=1368146&amp;doc_no=C058849">Parties and Attorneys</a> &nbsp;&nbsp; <a href="trialCourt.cfm?dist=3&amp;doc_id=1368146&amp;doc_no=C058849">Trial Court</a></b></font>
+                </div>
+                <p>
+                  <b><font face="Arial,Helvetica" size="+1">Case Summary</font></b>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <!-- SUMMARY TABLE -->
+                <table border="0" cellspacing="0" cellpadding="2">
+                  <!-- trial court case number -->
+                  <tr>
+                    <th align="left" valign="top">
+                      <font face="Arial,Helvetica" size="-1">Trial Court Case:</font>
+                    </th>
+                    <td align="left" valign="top" colspan="3">
+                      <font face="Arial,Helvetica" size="-1">07CS01331<br></font>
+                    </td>
+                  </tr><!-- appellate case number -->
+                  <tr>
+                    <th align="left" valign="top" nowrap>
+                      <font face="Arial,Helvetica" size="-1">Court of Appeal Case:</font>
+                    </th>
+                    <td align="left" valign="top">
+                      <font face="Arial,Helvetica" size="-1"><b>C058849</b></font>
+                    </td>
+                    <td align="left" valign="top">
+                      <img src="/images/1pixel.gif" border="0" width="10" height="5">
+                    </td>
+                    <td align="right" valign="top" nowrap></td>
+                  </tr><!-- supreme court case number -->
+                  <tr>
+                    <th align="left" valign="top" nowrap>
+                      <font face="Arial,Helvetica" size="-1"><b>Court of Appeal Opinion:</b></font>
+                    </th>
+                    <td align="left" valign="top" nowrap colspan="3">
+                      <font face="Arial,Helvetica" size="-1">[<a href="http://www.courtinfo.ca.gov/opinions/documents/C058849.PDF">PDF</a>] [<a href="http://www.courtinfo.ca.gov/opinions/documents/C058849.DOC">DOC</a>]</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="top" colspan="4" nowrap>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Arial,Helvetica" size="-2"><font color="#990000"><b>Caution:</b></font> For information on when opinions may be cited or relied upon, <a href="http://www.courtinfo.ca.gov/opinions/" target="opinions">click here</a>.</font>
+                    </td>
+                  </tr><!-- division -->
+                  <tr>
+                    <th align="left" valign="top">
+                      <font face="Arial,Helvetica" size="-1">Division:</font>
+                    </th>
+                    <td align="left" valign="top" colspan="3"></td>
+                  </tr><!-- case caption -->
+                  <tr>
+                    <th align="left" valign="top">
+                      <font face="Arial,Helvetica" size="-1">Case Caption:</font>
+                    </th>
+                    <td align="left" valign="top" colspan="3">
+                      <font face="Arial,Helvetica" size="-1">Thomas v. Shewry, as Director, etc.</font>
+                    </td>
+                  </tr><!-- case type -->
+                  <tr>
+                    <th align="left">
+                      <font face="Arial,Helvetica" size="-1">Case Type:</font>
+                    </th>
+                    <td align="left" colspan="3">
+                      <font face="Arial,Helvetica" size="-1">CV</font>
+                    </td>
+                  </tr><!-- filing date -->
+                  <tr>
+                    <th align="left">
+                      <font face="Arial,Helvetica" size="-1">Filing Date:</font>
+                    </th>
+                    <td align="left" colspan="3">
+                      <font face="Arial,Helvetica" size="-1">04/25/2008</font>
+                    </td>
+                  </tr><!-- oral argument date/time -->
+                  <tr>
+                    <th align="left">
+                      <font face="Arial,Helvetica" size="-1">Oral Argument Date/Time:</font>
+                    </th>
+                    <td align="left" colspan="3">
+                      <font face="Arial,Helvetica" size="-1">12/16/2008 &nbsp; 09:30 AM</font>
+                    </td>
+                  </tr>
+                </table>
+                <h3>
+                  <font face="Arial,Helvetica">Cross Referenced Cases</font>
+                </h3><!-- CROSS REF CASES INFORMATION TABLE -->
+                <table border="0" cellspacing="0" cellpadding="2">
+                  <!-- list of cases by case number and by case caption -->
+                  <tr>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1"><a href="mainCaseScreen.cfm?dist=3&amp;doc_id=724440">C047172</a></font>
+                    </td>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1">Capen v. Shewry, etc., et al.</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1"><a href="mainCaseScreen.cfm?dist=3&amp;doc_id=726751">C049484</a></font>
+                    </td>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1">Weber v. Shewry, as Director, etc.</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1"><a href="mainCaseScreen.cfm?dist=3&amp;doc_id=727500">C050233</a></font>
+                    </td>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1">Marvin Lieblein, Inc. et al. v. Shewry as Director etc.</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1"><a href="mainCaseScreen.cfm?dist=3&amp;doc_id=729051">C051785</a></font>
+                    </td>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1">B.D.O. Corporation v. Shewry, as Director etc.</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1"><a href="mainCaseScreen.cfm?dist=3&amp;doc_id=732133">C054868</a></font>
+                    </td>
+                    <td align="left">
+                      <font face="Arial,Helvetica" size="-1">Mission Hospital Regional etc. et al. v. Shewry, as Director, etc.</font>
+                    </td>
+                  </tr>
+                </table><!-- END CROSS REF CASES INFORMATION TABLE -->
+                <!-- END SUMMARY TABLE -->
+                <!-- detailed case information links -->
+                <p>
+                  <font face="Arial,Helvetica"><b><small><a href="../../email.cfm?dist=3&amp;doc_no=C058849">Click here</a> to request automatic e-mail notifications about this case.</small></b></font>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table><!-- END MAIN TABLE -->
+    <center>
+      <p>
+        <img src="/images/copyright.gif" alt="Copyright 2004 Judicial Council of California" border="0" height="14" width="255">
+      </p>
+    </center><!-- END MAIN TABLE -->
+    <!-- END DOCUMENT BODY -->
+  </body>
+</html>
