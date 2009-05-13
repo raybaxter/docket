@@ -22,15 +22,15 @@ describe Case do
     Case.create!(@valid_attributes).url.should == @location_url
   end
   
-  it "should import for a semi-colon delimited line" do
-    c = Case.import_line("C058849; 3")
+  it "should import for a comma delimited line" do
+    c = Case.import_line("C058849, 3,")
     c.number.should == "C058849"
     c.court.should == 3
     c.district.should be_nil
   end
   
-  it "should import for a semi-colon delimited file for district 4" do
-    c = Case.import_line("C058849; 4; 1")
+  it "should import for a comma delimited file for district 4" do
+    c = Case.import_line("C058849, 4, 1")
     c.court.should == 4
     c.district.should == 1
   end

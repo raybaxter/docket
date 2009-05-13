@@ -16,7 +16,7 @@ class Case < ActiveRecord::Base
   end
   
   def self.import_line(string)
-    docket, c, d = string.split(/;/)
+    docket, c, d = string.split(/,/)
     record = create!(:number => docket, :court => c, :district => d)
     record
   end
